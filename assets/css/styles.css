@@ -2,7 +2,27 @@ body {
     width: 100%;
     background-color: #f1faee;
     margin: 0;
+    padding: 0;
+    font-size: 16px;
 }
+
+/* -- GOOGLE FONTS -- */
+
+    /* <weight>: Use a value from 400 to 900 */
+    .playfair-display-400 {
+        font-family: "Playfair Display", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    /* <weight>: Use a value from 100 to 900 */
+    .raleway-300 {
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    }
 
 header {
     width: 100%;
@@ -14,19 +34,61 @@ header {
     align-items: center;
 }
 
-.yellow {
+.pink {
     color:#e63946 !important;
 }
 
 h1 {
     padding-left: 30px;
-}
-
-nav {
-    padding-right: 30px;
+    font-size: 4em;
 }
 
 #intro {
     text-align: center;
     padding: 20px;
+}
+
+/* Navbar */
+    nav ul {
+        padding-right: 30px;
+        list-style-type: none;
+    }
+
+    nav ul li  {
+        text-align: center;
+        padding: 3px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #e63946;
+    }
+
+    .number-size {
+        font-size: 1.15rem;
+    }
+
+/* -- MEDIA QUERIES -- */
+
+/* Medium Screens */
+@media (min-width: 768px) {
+
+    nav ul li {
+        display: inline;
+        padding: 0 6px;
+    }
+
+}
+  
+/* Large Screens */
+@media (min-width: 992px) {
+
+    nav ul li {
+        padding: 0 15px;
+    }
+
+    h1 {
+        padding-left: 60px;
+    }
+
 }
