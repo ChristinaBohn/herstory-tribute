@@ -1,0 +1,32 @@
+body {
+    width: 100%;
+    background-color: #f1faee;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    background-color: #0a0a23;
+    color: #f1faee;
+    border-bottom: 4px solid #e63946;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.yellow {
+    color:#e63946 !important;
+}
+
+h1 {
+    padding-left: 30px;
+}
+
+nav {
+    padding-right: 30px;
+}
+
+#intro {
+    text-align: center;
+    padding: 20px;
+}
