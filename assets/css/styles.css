@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -31,17 +32,7 @@ body {
     }
 
 
-/* TODO: Add playfair font to "story" etc, style timeline, style footer, add favicon */
-
-header {
-    width: 100%;
-    background-color: #0a0a23;
-    color: #f1faee;
-    border-bottom: 4px solid #e63946;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+/* TODO: Add sticky back to top button?, style timeline, style footer, add favicon */
 
 .pink {
     color:#e63946 !important;
@@ -51,8 +42,26 @@ header {
     font-style: italic;
 }
 
-.shadow {
-    font-weight: 600;
+.bold {
+    font-weight: 650;
+}
+header {
+    background-color: #0a0a23;
+    color: #f1faee;
+    border-bottom: 4px solid #e63946;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    background-color: #0a0a23;
+    color: #f1faee;
+    border-top: 4px solid #e63946;
+}
+
+footer ul {
+    list-style-type: none;
 }
 
 h1 {
