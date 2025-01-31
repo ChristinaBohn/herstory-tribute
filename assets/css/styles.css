@@ -1,9 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     width: 100%;
+    min-height: 100vh;
     background-color: #f1faee;
     margin: 0;
     padding: 0;
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 /* -- GOOGLE FONTS -- */
@@ -24,6 +30,9 @@ body {
     font-style: normal;
     }
 
+
+/* TODO: Add playfair font to "story" etc, style timeline, style footer, add favicon */
+
 header {
     width: 100%;
     background-color: #0a0a23;
@@ -38,6 +47,14 @@ header {
     color:#e63946 !important;
 }
 
+.italic {
+    font-style: italic;
+}
+
+.shadow {
+    font-weight: 600;
+}
+
 h1 {
     padding-left: 30px;
     font-size: 4em;
@@ -45,7 +62,7 @@ h1 {
 
 #intro {
     text-align: center;
-    padding: 20px;
+    padding: 20px 40px;
 }
 
 /* Navbar */
@@ -78,6 +95,10 @@ h1 {
         padding: 0 6px;
     }
 
+    #intro {
+        padding: 30px 60px;
+    }
+
 }
   
 /* Large Screens */
@@ -89,6 +110,10 @@ h1 {
 
     h1 {
         padding-left: 60px;
+    }
+
+    #intro {
+        padding: 50px 100px;
     }
 
 }
