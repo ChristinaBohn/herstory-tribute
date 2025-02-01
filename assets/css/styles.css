@@ -5,7 +5,7 @@
 
 body {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     background-color: #f1faee;
     margin: 0;
     padding: 0;
@@ -32,7 +32,7 @@ body {
     }
 
 
-/* TODO: Add sticky back to top button?, style timeline, style footer, add favicon */
+/* TODO: Add sticky back to top button?, style timeline, wrap list items under themselves, add favicon */
 
 .pink {
     color:#e63946 !important;
@@ -45,6 +45,7 @@ body {
 .bold {
     font-weight: 650;
 }
+
 header {
     background-color: #0a0a23;
     color: #f1faee;
@@ -58,10 +59,17 @@ footer {
     background-color: #0a0a23;
     color: #f1faee;
     border-top: 4px solid #e63946;
+    text-align: center;
 }
 
 footer ul {
     list-style-type: none;
+    display: inline-block;
+    text-align: left;
+}
+
+footer ul li {
+    padding: 10px;
 }
 
 h1 {
@@ -70,8 +78,15 @@ h1 {
 }
 
 #intro {
-    text-align: center;
     padding: 20px 40px;
+}
+
+h4 {
+    padding: 10px 20px 0;
+}
+
+#reference {
+    padding: 0 20px 30px;
 }
 
 /* Navbar */
@@ -108,13 +123,17 @@ h1 {
         padding: 30px 60px;
     }
 
+    footer ul li {
+        display: inline;
+    }
+
 }
   
 /* Large Screens */
 @media (min-width: 992px) {
 
     nav ul li {
-        padding: 0 15px;
+        padding: 0 30px;
     }
 
     h1 {
