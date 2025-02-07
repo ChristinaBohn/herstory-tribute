@@ -31,7 +31,7 @@ body {
     font-style: normal;
     }
 
-
+/* TODO: Use variables for colors */
 /* TODO: Add sticky back to top button? */
 
 .pink {
@@ -114,75 +114,74 @@ h4 {
     }
 
 /* -- TIMELINE -- */
-.timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+    .timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-/* The actual timeline (the vertical ruler) */
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background-color: #e63946;
-    top: 0;
-    bottom: 0;
-    left: 39px;
-    margin-left: -3px;
-}
+    /* The actual timeline (the vertical ruler) */
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background-color: #e63946;
+        top: 0;
+        bottom: 0;
+        left: 39px;
+        margin-left: -3px;
+    }
 
-/* Container around content */
-.container {
-    /* padding: 10px 40px; MQ */
-    padding-left: 70px;
-    padding-right: 25px;
-    position: relative;
-    background-color: inherit;
-    /* width: 50%; MQ */
-    width: 100%;
-    margin: 5px 0;
-  }
+    /* Container around content */
+    .container {
+        /* padding: 10px 40px; MQ */
+        padding-left: 70px;
+        padding-right: 25px;
+        position: relative;
+        background-color: inherit;
+        /* width: 50%; MQ */
+        width: 100%;
+        margin: 5px 0;
+    }
 
-/* The actual content */
-.content {
-    padding: 20px 30px;
-    color: #f1faee;
-    background-color: #0a0a23;
-    position: relative;
-    border-radius: 6px 100px 100px 6px;
-  }
+    /* The actual content */
+    .content {
+        padding: 20px 30px;
+        color: #f1faee;
+        background-color: #0a0a23;
+        position: relative;
+        border-radius: 6px 100px 100px 6px;
+    }
   
-  /* The circles on the timeline */
-  .container::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    left: -17px;
-    right: 0;
-    background-color: white;
-    border: 4px solid #e63946;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-  }
+    /* The circles on the timeline */
+    .container::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        left: -17px;
+        right: 0;
+        background-color: white;
+        border: 4px solid #e63946;
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+    }
 
-  /* Add arrows pointing leftwards */
-  .container::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid #0a0a23;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent #0a0a23 transparent transparent;
-  }
-
-
+    /* TODO: Position arrows on content cards */
+    /* Add arrows pointing leftwards */
+    .container::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        left: 30px;
+        border: medium solid #0a0a23;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #0a0a23 transparent transparent;
+    }
 
 /* -- MEDIA QUERIES -- */
 
@@ -198,7 +197,7 @@ h4 {
         padding: 30px 60px;
     }
 
-    /* Timeline */
+    /* -- TIMELINE -- */
     /* Position ruler to middle of page */
     .timeline::after {
         left: 50%;
@@ -209,6 +208,13 @@ h4 {
         padding: 10px 40px;
     }
 
+    .content {
+        margin: -20px 0;
+    }
+
+    .content-left {
+        border-radius: 100px 6px 6px 100px;
+    }
     /* TODO: Place circles on timeline */
     .left::after {
         left: 350px;
@@ -226,30 +232,22 @@ h4 {
         left: 50%;
     }
 
-    .content {
-        margin: -20px 0;
-    }
-
-    .content-left {
-        border-radius: 100px 6px 6px 100px;
-    }
-
+    /* TODO: Position arrows on cards */
     /* Arrows to the left container (pointing right) */
     .left::before {
-    right: 30px;
-    border: medium solid #0a0a23;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent #0a0a23;
-  }
+        right: 30px;
+        border: medium solid #0a0a23;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent #0a0a23;
+    }
   
     /* Arrows to the right container (pointing left) */
     .right::before {
-    left: 30px;
-    border: medium solid #0a0a23;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent #0a0a23 transparent transparent;
-  }
-
+        left: 30px;
+        border: medium solid #0a0a23;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #0a0a23 transparent transparent;
+    }
 }
   
 /* Large Screens */
@@ -270,5 +268,4 @@ h4 {
     footer ul {
         gap: 20px;
     }
-
 }
