@@ -66,6 +66,10 @@ ul, ol {
     list-style-type: none;
 }
 
+h3 {
+    color: #e63946;
+}
+
 footer ul {
     display: flex;
     text-align: left;
