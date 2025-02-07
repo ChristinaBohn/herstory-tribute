@@ -141,6 +141,16 @@ h4 {
     background-color: inherit;
     /* width: 50%; MQ */
     width: 100%;
+    margin: 5px 0;
+  }
+
+/* The actual content */
+.content {
+    padding: 20px 30px;
+    color: #f1faee;
+    background-color: #0a0a23;
+    position: relative;
+    border-radius: 6px 100px 100px 6px;
   }
   
   /* The circles on the timeline */
@@ -158,13 +168,19 @@ h4 {
     z-index: 1;
   }
 
-  /* Make sure that all arrows are pointing leftwards */
-  /* .container::before {
-    left: 60px;
-    border: medium solid white;
+  /* Add arrows pointing leftwards */
+  .container::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #0a0a23;
     border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-  } */
+    border-color: transparent #0a0a23 transparent transparent;
+  }
 
 
 
@@ -209,6 +225,30 @@ h4 {
     .right {
         left: 50%;
     }
+
+    .content {
+        margin: -20px 0;
+    }
+
+    .content-left {
+        border-radius: 100px 6px 6px 100px;
+    }
+
+    /* Arrows to the left container (pointing right) */
+    .left::before {
+    right: 30px;
+    border: medium solid #0a0a23;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #0a0a23;
+  }
+  
+    /* Arrows to the right container (pointing left) */
+    .right::before {
+    left: 30px;
+    border: medium solid #0a0a23;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #0a0a23 transparent transparent;
+  }
 
 }
   
