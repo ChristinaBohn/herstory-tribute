@@ -31,7 +31,7 @@ body {
     font-style: normal;
     }
 
-/* TODO: Use variables for colors */
+/* TODO: Use variables for colors, search best way */
 /* TODO: Add sticky back to top button? */
 
 .pink {
@@ -126,7 +126,7 @@ h4 {
 
     /* The actual timeline (the vertical ruler) */
     .timeline::after {
-        content: '';
+        content: "";
         position: absolute;
         width: 6px;
         background-color: #e63946;
@@ -138,28 +138,17 @@ h4 {
 
     /* Container around content */
     .container {
-        /* padding: 10px 40px; MQ */
         padding-left: 70px;
         padding-right: 25px;
         position: relative;
         background-color: inherit;
-        /* width: 50%; MQ */
         width: 100%;
         margin: 5px 0;
-    }
-
-    /* The actual content */
-    .content {
-        padding: 20px 30px;
-        color: #f1faee;
-        background-color: #0a0a23;
-        position: relative;
-        border-radius: 6px 100px 100px 6px;
     }
   
     /* The circles on the timeline */
     .container::after {
-        content: '';
+        content: "";
         position: absolute;
         width: 25px;
         height: 25px;
@@ -172,7 +161,7 @@ h4 {
         z-index: 1;
     }
 
-    /* TODO: Position arrows on content cards */
+    /* TODO: Position arrows on content cards, add box-shadow to cards */
     /* Add arrows pointing leftwards */
     .container::before {
         content: " ";
@@ -181,10 +170,19 @@ h4 {
         top: 22px;
         width: 0;
         z-index: 1;
-        left: 30px;
+        left: 60px;
         border: medium solid #0a0a23;
         border-width: 10px 10px 10px 0;
         border-color: transparent #0a0a23 transparent transparent;
+    }
+
+/* The actual content */
+    .content {
+        padding: 20px 30px;
+        color: #f1faee;
+        background-color: #0a0a23;
+        position: relative;
+        border-radius: 2px 100px 100px 2px;
     }
 
 /* -- MEDIA QUERIES -- */
@@ -214,11 +212,13 @@ h4 {
 
     .content {
         margin: -20px 0;
+        padding: 20px 40px;
     }
 
     .content-left {
-        border-radius: 100px 6px 6px 100px;
+        border-radius: 100px 2px 2px 100px;
     }
+
     /* TODO: Place circles on timeline */
     .left::after {
         left: 350px;
@@ -226,12 +226,11 @@ h4 {
         right: -17px; */
     }
 
-    /* Place the container to the left */
+    /* Place containers to left and right */
     .left {
         left: 0;
     }
   
-    /* Place the container to the right */
     .right {
         left: 50%;
     }
