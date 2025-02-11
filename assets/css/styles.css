@@ -221,9 +221,9 @@ h4 {
 
     /* TODO: Place circles on timeline */
     .left::after {
-        left: 350px;
-        /* left: 0;
-        right: -17px; */
+        /* left: 350px; */
+        /* right: -17%; */
+        left: 92%;
     }
 
     /* Place containers to left and right */
@@ -238,7 +238,7 @@ h4 {
     /* TODO: Position arrows on cards */
     /* Arrows to the left container (pointing right) */
     .left::before {
-        right: 30px;
+        left: 92%;
         border: medium solid #0a0a23;
         border-width: 10px 0 10px 10px;
         border-color: transparent transparent transparent #0a0a23;
