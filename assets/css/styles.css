@@ -1,4 +1,6 @@
-* {
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
@@ -12,8 +14,6 @@ body {
     width: 100%;
     height: 100vh;
     background-color: #f1faee;
-    margin: 0;
-    padding: 0;
     font-size: 16px;
 }
 
@@ -50,6 +50,7 @@ body {
 }
 
 header {
+    height: 180px;
     background-color: var(--dark-blue);
     color: #f1faee;
     border-bottom: 4px solid var(--pink);
@@ -59,20 +60,16 @@ header {
 }
 
 footer {
+    min-height: 200px;
     background-color: var(--dark-blue);
     color: #f1faee;
     border-top: 4px solid var(--pink);
     text-align: center;
+    bottom: 0;
 }
 
 ul, ol {
     list-style-type: none;
-}
-
-h3 {
-    color: var(--pink);
-    font-family: "Raleway", serif;
-    font-weight: 500;
 }
 
 .content p {
@@ -84,10 +81,17 @@ footer ul {
     display: flex;
     text-align: left;
     justify-content: center;
+    padding-left: 20px;
 }
 
 footer ul li {
-    padding: 10px;
+    padding: 20px;
+}
+
+#intro {
+    text-align: center;
+    padding: 30px 40px;
+    margin: 0 0 30px;
 }
 
 h1 {
@@ -95,17 +99,23 @@ h1 {
     font-size: 4em;
 }
 
-#intro {
-    text-align: center;
-    padding: 20px 40px;
+h2 {
+    padding: 20px 0;
+}
+
+h3 {
+    color: var(--pink);
+    font-family: "Raleway", serif;
+    font-weight: 500;
+    padding-bottom: 8px;
 }
 
 h4 {
-    padding: 10px 20px 0;
+    padding: 30px 20px 20px;
 }
 
 #reference {
-    padding: 0 20px 30px;
+    padding: 30px;
 }
 
 /* -- NAVBAR -- */
@@ -131,7 +141,7 @@ h4 {
     .timeline {
         position: relative;
         max-width: 1200px;
-        margin: 0 auto;
+        margin: 0 auto 40px;
     }
 
     /* The actual timeline (the vertical ruler) */
@@ -142,7 +152,7 @@ h4 {
         background-color: var(--pink);
         top: 0;
         bottom: 0;
-        left: 39px;
+        left: 31px;
         margin-left: -3px;
     }
 
@@ -153,7 +163,7 @@ h4 {
         position: relative;
         background-color: inherit;
         width: 100%;
-        margin: 5px 0;
+        margin: 10px 0;
     }
   
     /* The circles on the timeline */
@@ -162,7 +172,7 @@ h4 {
         position: absolute;
         width: 25px;
         height: 25px;
-        left: -17px;
+        left: 19px;
         right: 0;
         background-color: white;
         border: 4px solid var(--pink);
@@ -202,15 +212,12 @@ h4 {
 
     nav ul li {
         display: inline;
-        padding: 0 6px;
+        padding: 0 8px;
+        font-weight: 500;
     }
 
     #intro {
         padding: 30px 60px;
-    }
-
-    .timeline {
-        margin-bottom: 20px;
     }
 
     /* -- TIMELINE -- */
@@ -222,10 +229,11 @@ h4 {
     .container {
         width: 50%;
         padding: 10px 40px;
+         margin: -40px 0;
     }
 
     .content {
-        margin: -20px 0;
+       
         padding: 20px 40px;
     }
 
@@ -236,9 +244,7 @@ h4 {
 
     /* TODO: Place circles on timeline */
     .left::after {
-        /* left: 350px; */
-        /* right: -17%; */
-        left: 92%;
+        left: 97%;
     }
 
     /* Place containers to left and right */
@@ -272,7 +278,7 @@ h4 {
 @media (min-width: 992px) {
 
     nav ul li {
-        padding: 0 30px;
+        padding: 0 25px;
     }
 
     h1 {
