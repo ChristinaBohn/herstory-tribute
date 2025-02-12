@@ -205,6 +205,25 @@ h4 {
         border-radius: 2px 100px 100px 2px;
     }
 
+/* Back to top button */
+.top-button {
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    font-size: 1.2em;
+    padding: 10px 25px;
+    border: 2px solid var(--pink);
+    border-radius: 3px;
+    background-color: #f1faee;
+    filter: opacity(40%);
+}
+
+.top-button:hover {
+    filter: none;
+}
+
 /* -- MEDIA QUERIES -- */
 
 /* Medium Screens */
@@ -229,11 +248,10 @@ h4 {
     .container {
         width: 50%;
         padding: 10px 40px;
-         margin: -40px 0;
+        margin: -40px 0;
     }
 
     .content {
-       
         padding: 20px 40px;
     }
 
@@ -245,6 +263,10 @@ h4 {
     /* TODO: Place circles on timeline */
     .left::after {
         left: 97%;
+    }
+
+    .right::after {
+        left: -13px;
     }
 
     /* Place containers to left and right */
