@@ -1,3 +1,5 @@
+/* TODO: Position arrows on content cards, position circles on timeline, add box-shadow to cards and button, change link color on hover */
+
 *, ::before, ::after {
     padding: 0;
     margin: 0;
@@ -8,34 +10,30 @@
 :root {
     --pink: #e63946;
     --dark-blue: #0a0a23;
+    --vintage-white: #f1faee;
 }
 
 body {
     width: 100%;
     height: 100vh;
-    background-color: #f1faee;
+    background-color: var(--vintage-white);
     font-size: 16px;
 }
 
 /* -- GOOGLE FONTS -- */
-
-    /* <weight>: Use a value from 400 to 900 */
-    .playfair-display-400 {
-        font-family: "Playfair Display", serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-    }
-
-    /* <weight>: Use a value from 100 to 900 */
-    .raleway-300 {
-    font-family: "Raleway", serif;
+.playfair-display-400 {
+    font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
-    }
+}
 
-/* TODO: Add sticky back to top button? */
+.raleway-300 {
+font-family: "Raleway", serif;
+font-optical-sizing: auto;
+font-weight: 300;
+font-style: normal;
+}
 
 .pink {
     color: var(--pink) !important;
@@ -52,7 +50,7 @@ body {
 header {
     height: 180px;
     background-color: var(--dark-blue);
-    color: #f1faee;
+    color: var(--vintage-white);
     border-bottom: 4px solid var(--pink);
     display: flex;
     justify-content: space-between;
@@ -62,7 +60,7 @@ header {
 footer {
     min-height: 200px;
     background-color: var(--dark-blue);
-    color: #f1faee;
+    color: var(--vintage-white);
     border-top: 4px solid var(--pink);
     text-align: center;
     bottom: 0;
@@ -119,91 +117,90 @@ h4 {
 }
 
 /* -- NAVBAR -- */
-    nav ul {
-        padding-right: 30px;
-    }
+nav ul {
+    padding-right: 30px;
+}
 
-    nav ul li  {
-        text-align: center;
-        padding: 3px;
-    }
+nav ul li  {
+    text-align: center;
+    padding: 3px;
+}
 
-    a {
-        text-decoration: none;
-        color: var(--pink);
-    }
+a {
+    text-decoration: none;
+    color: var(--pink);
+}
 
-    .number-size {
-        font-size: 1.15rem;
-    }
+.number-size {
+    font-size: 1.15rem;
+}
 
 /* -- TIMELINE -- */
-    .timeline {
-        position: relative;
-        max-width: 1200px;
-        margin: 0 auto 40px;
-    }
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
 
-    /* The actual timeline (the vertical ruler) */
-    .timeline::after {
-        content: "";
-        position: absolute;
-        width: 6px;
-        background-color: var(--pink);
-        top: 0;
-        bottom: 0;
-        left: 31px;
-        margin-left: -3px;
-    }
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: var(--pink);
+    top: 0;
+    bottom: 0;
+    left: 31px;
+    margin-left: -3px;
+}
 
-    /* Container around content */
-    .container {
-        padding-left: 70px;
-        padding-right: 25px;
-        position: relative;
-        background-color: inherit;
-        width: 100%;
-        margin: 10px 0;
-    }
-  
-    /* The circles on the timeline */
-    .container::after {
-        content: "";
-        position: absolute;
-        width: 25px;
-        height: 25px;
-        left: 19px;
-        right: 0;
-        background-color: white;
-        border: 4px solid var(--pink);
-        top: 15px;
-        border-radius: 50%;
-        z-index: 1;
-    }
+/* Container around content */
+.container {
+    padding-left: 70px;
+    padding-right: 25px;
+    position: relative;
+    background-color: inherit;
+    width: 100%;
+    margin: 10px 0;
+}
 
-    /* TODO: Position arrows on content cards, add box-shadow to cards */
-    /* Add arrows pointing leftwards */
-    .container::before {
-        content: " ";
-        height: 0;
-        position: absolute;
-        top: 22px;
-        width: 0;
-        z-index: 1;
-        left: 60px;
-        border: medium solid var(--dark-blue);
-        border-width: 10px 10px 10px 0;
-        border-color: transparent var(--dark-blue) transparent transparent;
-    }
+/* The circles on the timeline */
+.container::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 19px;
+    right: 0;
+    background-color: var(--vintage-white);
+    border: 4px solid var(--pink);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Add arrows pointing leftwards */
+.container::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 60px;
+    border: medium solid var(--dark-blue);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--dark-blue) transparent transparent;
+}
 
 /* The actual content */
-    .content {
-        padding: 20px 30px;
-        color: #f1faee;
-        background-color: var(--dark-blue);
-        position: relative;
-        border-radius: 2px 100px 100px 2px;
-    }
+.content {
+    padding: 20px 30px;
+    color: var(--vintage-white);
+    background-color: var(--dark-blue);
+    position: relative;
+    border-radius: 2px 100px 100px 2px;
+}
 
 /* Back to top button */
 .top-button {
@@ -216,8 +213,9 @@ h4 {
     padding: 10px 25px;
     border: 2px solid var(--pink);
     border-radius: 3px;
-    background-color: #f1faee;
+    background-color: var(--vintage-white);
     filter: opacity(40%);
+    cursor: pointer;
 }
 
 .top-button:hover {
@@ -260,7 +258,7 @@ h4 {
         text-align: right;
     }
 
-    /* TODO: Place circles on timeline */
+    /* Place circles on timeline */
     .left::after {
         left: 97%;
     }
@@ -278,7 +276,6 @@ h4 {
         left: 50%;
     }
 
-    /* TODO: Position arrows on cards */
     /* Arrows to the left container (pointing right) */
     .left::before {
         left: 92%;
