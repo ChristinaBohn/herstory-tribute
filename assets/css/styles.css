@@ -108,8 +108,13 @@ a {
 }
 
 nav ul li:hover {
-    transform: scale(1.2);
-    transition: 0.5s ease-in-out;
+    font-size: 120%;
+    transition: 0.3s ease-in-out;
+}
+
+.number-size:hover {
+    font-size: 120%;
+    transition: 0.3s ease-in-out;
 }
 
 footer {
@@ -130,6 +135,7 @@ footer ul {
 
 footer ul li {
     padding: 20px;
+    text-align: center;
 }
 
 #reference {
@@ -137,8 +143,9 @@ footer ul li {
 }
 
 footer ul li:hover {
-    transform: scale(1.1);
-    transition: 0.5s;
+    /* transform: scale(1.1); */
+    font-size: 110%;
+    transition: 0.5s ease-in-out;
 }
 
 .number-size {
@@ -222,11 +229,12 @@ footer ul li:hover {
     font-weight: 500;
     font-size: 1.2em;
     color: var(--pink);
-    padding: 10px 25px;
+    padding: 5px 25px;
     border: 2px solid var(--pink);
     border-radius: 3px;
     background-color: var(--vintage-white);
     filter: opacity(40%);
+    transition: 0.5s;
     /* TODO: cursor: pointer */
 }
 
