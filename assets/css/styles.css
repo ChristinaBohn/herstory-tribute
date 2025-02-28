@@ -89,7 +89,7 @@ h3 {
 }
 
 h4 {
-    padding: 30px 20px 20px;
+    padding: 40px 20px 20px;
 }
 
 /* -- NAVBAR -- */
@@ -143,8 +143,7 @@ footer ul li {
 }
 
 footer ul li:hover {
-    /* transform: scale(1.1); */
-    font-size: 110%;
+    transform: scale(1.1);
     transition: 0.5s ease-in-out;
 }
 
@@ -216,8 +215,11 @@ footer ul li:hover {
     color: var(--vintage-white);
     background-color: var(--dark-blue);
     position: relative;
+    /* border: 1px solid var(--dark-blue); */
     border-radius: 2px 100px 100px 2px;
-    box-shadow: 3px 3px 6px gray;
+    box-shadow:
+        /* inset 2px 2px 5px var(--vintage-white), */
+        3px 3px 6px gray;
 }
 
 /* Back to top button */
@@ -233,13 +235,14 @@ footer ul li:hover {
     border: 2px solid var(--pink);
     border-radius: 3px;
     background-color: var(--vintage-white);
-    filter: opacity(40%);
-    transition: 0.5s;
+    box-shadow: inset -1px -2px 5px var(--pink);
+    filter: opacity(35%);
+    transition: 0.4s;
     /* TODO: cursor: pointer */
 }
 
 .top-button:hover {
-    filter: none;
+    filter: opacity(80%);
 }
 
 /* -- MEDIA QUERIES -- */
