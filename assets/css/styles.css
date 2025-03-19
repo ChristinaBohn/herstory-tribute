@@ -10,7 +10,7 @@
 :root {
     --pink: #e63946;
     --dark-blue: #0a0a23;
-    --vintage-white: #f1faee;
+    --vintage-white: #e4e5df;
 }
 
 body {
@@ -108,13 +108,13 @@ a {
 }
 
 nav ul li:hover {
-    font-size: 120%;
-    transition: 0.3s ease-in-out;
+    font-size: 110%;
+    transition: 0.3s ease-in;
 }
 
 .number-size:hover {
-    font-size: 120%;
-    transition: 0.3s ease-in-out;
+    font-size: 115%;
+    transition: 0.3s ease-in;
 }
 
 footer {
@@ -167,7 +167,7 @@ footer ul li:hover {
     top: 0;
     bottom: 0;
     left: 31px;
-    margin-left: -3px;
+    margin: 6px 0 -40px -3px;
 }
 
 /* Container around content */
@@ -225,7 +225,7 @@ footer ul li:hover {
 /* Back to top button */
 .top-button {
     position: fixed;
-    bottom: 30px;
+    bottom: 20px;
     right: 40px;
     font-family: "Playfair Display", serif;
     font-weight: 500;
@@ -243,6 +243,10 @@ footer ul li:hover {
 
 .top-button:hover {
     filter: opacity(80%);
+}
+
+.top-button:active {
+    transform: scale(0.9);
 }
 
 /* -- MEDIA QUERIES -- */
@@ -264,6 +268,7 @@ footer ul li:hover {
     /* Position ruler to middle of page */
     .timeline::after {
         left: 50%;
+        margin-bottom: 0;
       }
 
     .container {

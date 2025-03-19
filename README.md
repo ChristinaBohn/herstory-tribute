@@ -14,7 +14,7 @@ https://christinabohn.github.io/herstory-tribute/
 
 ## Preview
 
-![herstory-preview](assets/images/herstory-preview.png)
+![herstory preview](assets/images/herstory-preview.png)
 
 ## Thank You
 For taking the time to check out my page!
